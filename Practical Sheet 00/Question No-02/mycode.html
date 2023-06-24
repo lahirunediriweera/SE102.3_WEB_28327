@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        window.onload = function(){
+            var total = 0;
+            for(var i=1; i<=5; i++){
+                var mark = parseInt(window.prompt("Enter the Marks: "));
+                total += mark;
+            }
+
+            var average = total/5;
+            document.write("Total is: ",total);
+            document.write("<br/>")
+            document.write("Average: ",average);
+            document.write("<br/>")
+            var button = document.createElement("button");
+            button.innerHTML = "Grade";
+            button.onclick = function(){
+                if(average > 30){
+                    window.alert("Congratulations!");
+                } else{
+                    window.alert("Bettet Luck Try Next Time");
+                }
+            };
+            document.body.appendChild(button);
+        }
+    </script>
+</body>
+</html>
